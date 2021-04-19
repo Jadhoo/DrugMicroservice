@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+    name: "drugapi-43fb"
+    labels:
+        app: "drugapi-43fb"
+    annotations:
+        kubernetes.io/ingress.class: addon-http-application-routing
+spec:
+    rules:
+        - host: drug-apiab8a-drugapi-43fb.f409e526b18d4decab7b.centralus.aksapp.io
+          http:
+            paths:
+            - path: /
+              backend:
+                serviceName: "drugapi-43fb"
+                servicePort: 80
