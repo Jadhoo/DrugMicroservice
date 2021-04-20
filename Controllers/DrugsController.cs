@@ -1,4 +1,5 @@
 ﻿using DrugMicroservice.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -10,6 +11,7 @@ namespace DrugMicroservice.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class DrugsController : ControllerBase
     {
         readonly log4net.ILog _log4net;
